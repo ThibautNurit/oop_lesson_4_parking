@@ -21,11 +21,20 @@ namespace oop_lesson_4_parking.Models
             return "CarParkCharge I am";
         }
 
-        public int CalculateCharge(int hoursParked)
+        public double CalculateCharge(int hoursParked)
         {
-            
-            int calculateFee = hoursParked < minimumHours ? minimumFee : hoursParked * minimumFee;
-            return hoursParked * minimumFee;
+
+            double calculateFee = minimumFee;
+            if (hoursParked > minimumHours)
+            {
+                calculateFee += 0.5 * (hoursParked - 3);
+            }
+            if (calculateFee > 10)
+            {
+                calculateFee = 10;
+            }
+
+            return calculateFee;
         }
 
     }

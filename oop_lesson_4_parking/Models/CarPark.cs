@@ -32,7 +32,7 @@ namespace oop_lesson_4_parking.Models
         {
             foreach(Customer c in listOfCustomers)
             {
-                int calculatedCharges = cpc.CalculateCharge(c.hoursParked);
+                double calculatedCharges = cpc.CalculateCharge(c.hoursParked);
                 Console.WriteLine($"Calculating charge for customer cost is : {calculatedCharges}");
             }
         }
