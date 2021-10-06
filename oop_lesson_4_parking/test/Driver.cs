@@ -24,12 +24,12 @@ namespace oop_lesson_4_parking.test
 
             CarPark cp = new CarPark();
 
-            cp.listOfCustomers.Add(cu);
-            cp.listOfCustomers.Add(cu2);
-            cp.listOfCustomers.Add(cu3);
-            cp.listOfCustomers.Add(cu4);
-            cp.listOfCustomers.Add(cu5);
-            cp.listOfCustomers.Add(cu6);
+            cp.AddCustomer(cu);
+            cp.AddCustomer(cu2);
+            cp.AddCustomer(cu3);
+            cp.AddCustomer(cu4);
+            cp.AddCustomer(cu5);
+            cp.AddCustomer(cu6);
             cp.CalculateCharges();
 
 

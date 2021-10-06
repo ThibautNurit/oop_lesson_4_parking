@@ -9,13 +9,18 @@ namespace oop_lesson_4_parking.Models
     class CarPark
     {
 
-        public List<Customer> listOfCustomers = new List<Customer>();
+        private List<Customer> listOfCustomers = new List<Customer>();
 
         public CarParkCharge cpc = new CarParkCharge();
 
         public CarPark()
         {
             Console.WriteLine("I am CarPark");
+        }
+
+        public void AddCustomer(Customer newCustomer)
+        {
+            listOfCustomers.Add(newCustomer);
         }
 
         public override string ToString()
